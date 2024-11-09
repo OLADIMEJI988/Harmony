@@ -5,48 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lumine Naturals</title>
     <link rel="stylesheet" href="output.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body class="antialiased bg-[#304D50]">
-    <section class="my-10 mx-14">
-      <header class="flex">
-        <div class="flex">
+    <section class="my-10 mobile:max-lmd:my-0 mobile:max-lmd:mb-6 lmd:mx-14 ">
+      <header class="flex mobile:max-lmd:px-14 mobile:max-lmd:py-6">
+        <div class="hidden xl:flex">
           <img class="h-10" src="../dist/images/logo.png" alt="" />
           <img
-            class="ml-2 h-7 mt-1"
+            class="ml-2 h-7 sxl:max-xl:h-8 mt-1"
             src="../dist/images/Luminé Naturals.png"
             alt=""
           />
         </div>
-        <div class="flex primary gap-7 text-sm mt-1 ml-auto">
-          <h1 class="cursor-pointer">Shop</h1>
-          <h1 class="cursor-pointer">Cleansers</h1>
-          <h1 class="cursor-pointer">Moisturizers</h1>
-          <h1 class="cursor-pointer">Serums & Treatments</h1>
-          <h1 class="cursor-pointer">About Us</h1>
+       
+        <div class="flex xl:hidden">
+          <img class="h-10" src="../dist/images/logo.png" alt="" />
+          <img
+            class="ml-2 h-7 sxl:max-xl:h-8 mt-1"
+            src="../dist/images/Luminé Naturals.png"
+            alt=""
+          />
         </div>
+
+        <span class="text-3xl ml-auto lmd:hidden block text-[#d2d7d8]">
+          <ion-icon name="menu" onclick="Menu(this)" class="cursor-pointer"></ion-icon>
+        </span>
+        <ul
+          id="menu-list"
+          class="z-[1] top-[87px] opacity-0 flex-row font-semibold text-center text-xl text-[#d2d7d8] transition-all ease-in duration-500 bg-[#304D50] shadow-2xl w-full justify-center left-0 lmd:hidden lmd:static absolute"
+        >
+          <li class="list-none ml-auto mr-auto my-6 xl:my-0">
+            <p class="cursor-pointer">Shop</p>
+          </li>
+          <li class="list-none my-6 xl:my-0">
+            <p class="cursor-pointer">Cleansers</p>
+          </li>
+          <li class="list-none my-6 xl:my-0">
+            <p class="cursor-pointer">Moisturizers</p>
+          </li>
+          <li class="list-none my-6 xl:my-0">
+            <p class="cursor-pointer">Serums & Treatments</p>
+          </li>
+          <li class="list-none my-6 xl:my-0">
+            <p class="cursor-pointer">About Us</p>
+          </li>
+        </ul>        
+
+        <div
+          class="hidden lmd:flex list-none primary gap-7 sxl:max-xl:gap-5 lmd:gap-6 text-sm sxl:max-xl:text-[15px] lmd:text-[13px] mt-1 ml-auto"
+        >
+          <li class="cursor-pointer">Shop</li>
+          <li class="cursor-pointer">Cleansers</li>
+          <li class="cursor-pointer">Moisturizers</li>
+          <li class="cursor-pointer">Serums & Treatments</li>
+          <li class="cursor-pointer">About Us</li>
+        </div>
+
       </header>
-      <section class="flex mt-12">
+      <!--  -->
+      <section class="md:block lmd:hidden justify-center text-center mt-10">
+        <img
+          class="h-[390px] ml-auto mr-auto"
+          src="../dist/images/Union.png"
+          alt=""
+        />
         <div>
-          <h1 class="primary text-[75px] tracking-tighter font-semibold">
-            Harmony In
-          </h1>
-          <h1 class="primary text-[75px] tracking-tighter font-semibold -mt-10">
-            Every Drop,
-          </h1>
-          <h1 class="secondary text-[75px] tracking-tighter font-semibold -mt-10">
-            Naturally Yours
-          </h1>
+          <div class="primary text-[70px] tracking-tighter font-semibold">
+            <h1 class="line_height mb-4 mx-3 mt-4">
+              Harmony In Every Drop,
+            </h1>
+
+            <h1 class="secondary line_height">Naturally Yours</h1>
+          </div>
+
           <div class="secondary mt-3.5 text-sm tracking-wide">
             <h1>Experience the purity of skincare with our all-natural</h1>
             <h1>collection, thoughtfully created just for you. Unveil the</h1>
             <h1>beauty of wholesome ingredients working in harmony to</h1>
             <h1>nourish and revitalize your skin.</h1>
           </div>
-          <button class="mt-[22px] black text-[10px] font-bold shop">Shop Now</button>
-          
+          <button class="mt-[20px] black text-[19px] font-bold mobile_btn">
+            Shop Now
+          </button>
         </div>
-        <img class="h-[430px] ml-auto" src="../dist/images/Union.png" alt="" />
       </section>
+
+      <!--  -->
+
+      <section class="lmd:flex mobile:max-lmd:hidden mt-12 sxl:max-xl:mt-16">
+        <div>
+          <div
+            class="primary text-[75px] sxl:max-xl:text-[72px] lmd:text-[63px] tracking-tighter font-semibold"
+          >
+            <h1 class="">Harmony In</h1>
+            <h1 class="-mt-10 lmd:-mt-8">Every Drop,</h1>
+            <h1 class="secondary -mt-10 lmd:-mt-8">Naturally Yours</h1>
+          </div>
+
+          <div class="secondary mt-3.5 text-sm lmd:text-[12px] tracking-wide">
+            <h1>Experience the purity of skincare with our all-natural</h1>
+            <h1>collection, thoughtfully created just for you. Unveil the</h1>
+            <h1>beauty of wholesome ingredients working in harmony to</h1>
+            <h1>nourish and revitalize your skin.</h1>
+          </div>
+          <button
+            class="mt-[22px] black text-[10px] sxl:max-xl:text-[12px] lmd:text-[13px] font-bold shop"
+          >
+            Shop Now
+          </button>
+        </div>
+        <img
+          class="h-[430px] ml-auto sxl:max-xl:h-[390px] lmd:h-[350px]"
+          src="../dist/images/Union.png"
+          alt=""
+        />
+      </section>
+
     </section>
+    <script src="./harmony.js"></script>
   </body>
 </html>
